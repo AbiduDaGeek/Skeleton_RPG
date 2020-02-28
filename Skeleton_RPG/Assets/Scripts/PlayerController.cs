@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Move player to the touch position
         if(Input.GetMouseButton(0))
         {
             //Declaring the ray to be shooted from the cam
@@ -35,6 +36,21 @@ public class PlayerController : MonoBehaviour
                 //move player to what we hit
                 motor.MoveToPoint(hit.point);
                 //difoucing
+            }
+        }
+        
+        //Focus on Interactive Objects
+        if(Input.GetMouseButton(1))
+        {
+            //Declaring the ray to be shooted from the cam
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            //declare the variable to store the info, what we hit ?
+            RaycastHit hit;
+            //cast ray from camera to screen position
+            if(Physics.Raycast(ray, out hit, 100))
+            {
+                //check if the object is interactive
+                //if so, set it to goal
             }
         }
         
