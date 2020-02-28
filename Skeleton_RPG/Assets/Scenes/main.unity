@@ -580,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607406312}
   m_LocalRotation: {x: 0.6460436, y: 0.12397349, z: 0.10743967, w: 0.745463}
-  m_LocalPosition: {x: -2.3, y: 11.3, z: -12.4}
+  m_LocalPosition: {x: -7.5, y: 9.13, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1447475107}
@@ -3212,9 +3212,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1396792490}
-  offset: {x: 0, y: -0.34, z: -0.51}
+  offset: {x: 0, y: -1.79, z: -1.98}
+  zoomSpeed: 2
+  minZoom: 2
+  maxZoom: 2
   pitch: 2
-  currentZoom: 10
+  currentZoom: 2
+  yawSpeed: 100
 --- !u!1 &1757843626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +4402,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190431277530444823, guid: 2149e95d0abd23d4a809fb7d07905b69,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190431277530444823, guid: 2149e95d0abd23d4a809fb7d07905b69,
+        type: 3}
+      propertyPath: m_Speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2190431277530444824, guid: 2149e95d0abd23d4a809fb7d07905b69,
         type: 3}
