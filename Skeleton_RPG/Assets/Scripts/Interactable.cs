@@ -43,7 +43,8 @@ public virtual void Interact()
 
    private void OnDrawGizmosSelected() 
    {
-
+      if(interactionTransform == null)
+      interactionTransform = transform;
     Gizmos.color = Color.yellow;
     Gizmos.DrawWireSphere(interactionTransform.position, radius);
 

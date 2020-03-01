@@ -1,7 +1,7 @@
 ﻿    using UnityEngine;
     using UnityEngine.AI;
     
-    public class moveTo : MonoBehaviour {
+    public class MoveTo : MonoBehaviour {
        
        public Transform goal;
        
