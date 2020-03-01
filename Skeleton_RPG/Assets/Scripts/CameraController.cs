@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// source code in EP1
 public class CameraController : MonoBehaviour
 {
     public Transform target;

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask movementMask;
     //reference to camera, stored in a variable
     Camera cam;
+    public Interactable focus;
     PlayerMotor motor;
     // Start is called before the first frame update
     void Start()
@@ -49,10 +50,36 @@ public class PlayerController : MonoBehaviour
             //cast ray from camera to screen position
             if(Physics.Raycast(ray, out hit, 100))
             {
-                //check if the object is interactive
+                //check if the object is interactiveStuff
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
                 //if so, set it to goal
+                if(interactable != null)
+                {
+                    SetFocus(interactable);
+                }
             }
         }
         
     }
+void SetFocus (Interactable newFocus)
+{
+    if (newFocus != focus)
+    {
+        if(focus != null)
+        focus.OnDefocused();
+        focus = newFocus;
+        motor.FollowTarget(newFocus);
+    }
+    
+    newFocus.OnFocused(transform);
+    
+}
+void RemoveFocus()
+{
+    if(focus != null)
+    focus.OnDefocused();
+    focus = null;
+    motor.StopFollowingTarget();
+}
+
 }
