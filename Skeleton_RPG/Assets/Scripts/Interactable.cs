@@ -33,7 +33,7 @@ public virtual void Interact()
       hasInteracted = false;
       
    }
-   public void OnDefocused () 
+   public void OnDefocused() 
    {
       isFocus = false ;
       player = null ;

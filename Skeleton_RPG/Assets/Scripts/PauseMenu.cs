@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -14,7 +16,7 @@ public class PauseMenu : MonoBehaviour
         {
            Resume();
            // Debug.Log("Quit!!");
-            //Application.Quit();
+           //Application.Quit();
         }
         else 
         {
@@ -24,7 +26,7 @@ public class PauseMenu : MonoBehaviour
         }
               
     }
-    void Resume()
+    public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -38,5 +40,15 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused =true;
 
     }
-    
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu"); //Name of the menu scene should be Match
+    }
+    public void Quit()
+    {
+        Debug.Log("Quit!!");
+        Application.Quit();
+    }
+
+
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Set walkable object in ground layer
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
                 //move player to what we hit
                 motor.MoveToPoint(hit.point);
                 //difoucing
+                RemoveFocus();
             }
         }
         
@@ -46,9 +48,8 @@ public class PlayerController : MonoBehaviour
             //Declaring the ray to be shooted from the cam
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             //declare the variable to store the info, what we hit ?
-            RaycastHit hit;
-            //cast ray from camera to screen position
-            if(Physics.Raycast(ray, out hit, 100))
+            RaycastHit hit;//cast ray from camera to screen position
+            if (Physics.Raycast(ray, out hit, 100))
             {
                 //check if the object is interactiveStuff
                 Interactable interactable = hit.collider.GetComponent<Interactable>();

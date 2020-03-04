@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;
-    public float zoomSpeed = 4f;
+    public float zoomSpeed = 1f;
     public float minZoom = 5f;
     public float maxZoom = 15f;
     public float pitch = 2f;
@@ -21,9 +21,9 @@ public class CameraController : MonoBehaviour
 
 private void Update() 
 {
-    currentZoom -= Input.GetAxis("Mouse Y") * zoomSpeed; //Not Implemented
+    currentZoom -= Input.GetAxis("Vertical") * zoomSpeed; //Not Implemented
     currentZoom  = Mathf.Clamp(currentZoom, minZoom, maxZoom);
-    currentYaw -= Input.GetAxis("Mouse X") * yawSpeed * Time.deltaTime; //Previously was "Horizon" 
+    currentYaw -= Input.GetAxis("Horizontal") * yawSpeed * Time.deltaTime; //Previously was "Horizon" 
 
     
 }
