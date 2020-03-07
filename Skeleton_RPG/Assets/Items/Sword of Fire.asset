@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff8b380551fda74193b3e32fd555f3f, type: 3}
-  m_Name: Helmet
+  m_Script: {fileID: 11500000, guid: 301e9e3c94fa405489c262a285c2d221, type: 3}
+  m_Name: Sword of Fire
   m_EditorClassIdentifier: 
-  name: HelemtOfProtection
+  name: Sword of Fire
   icon: {fileID: 21300000, guid: 3bc598c00b5c5b44ea1f43bba22f502b, type: 3}
   isDefaultItem: 0
+  armorModifier: 0
+  damageModifier: 4
+  epuipSlot: 4
