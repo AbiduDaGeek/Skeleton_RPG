@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 301e9e3c94fa405489c262a285c2d221, type: 3}
-  m_Name: Helmet of Protection
+  m_Name: Armor of Protection
   m_EditorClassIdentifier: 
-  name: Helmet of Protection
-  icon: {fileID: 21300000, guid: 00ea9caa3b3fcaa4b8813f908bf60945, type: 3}
+  name: Armor of Protection
+  icon: {fileID: 21300000, guid: 239e4ec705a0fbd4a9eed49c459506d4, type: 3}
   isDefaultItem: 0
   armorModifier: 2
   damageModifier: 1
