@@ -23,7 +23,7 @@ public class CharacterStats : MonoBehaviour
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
         currentHealth -= damage;
-        Debug.Log(transform.name + "Taking" + damage + "damege");
+        Debug.Log(transform.name + "Taking " + damage + " damege");
         if (currentHealth <= 0)
         {
             Die();
@@ -33,6 +33,6 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         //this method will be overwritter by Specific character i.e enemy/ hero etc
-        Debug.Log(transform.name + "Died");
+        Debug.Log(transform.name + "  Died");
     }
 }

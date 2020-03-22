@@ -24,4 +24,11 @@ public class PlayerStats : CharacterStats
             damage.RemoveModifier(oldItem.damageModifier);
         }
     }
+    public override void Die()
+    {
+        base.Die();
+        //Very Importan place where we can resart from the last check points, or restart,
+        //Take some points back etc
+        PlayerManager.instance.KillPlayer();
+    }
 }
